@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 16px;
+}
+
+p {
+  font-size: 22px;
+  font-weight: 300;
+  color: #a7a39c;
+}
+
+h2 {
+  color: #1d1d1d;
+  font-size: 56px;
+  line-height: 65px;
+  font-weight: 500;
+}
+
+h4 {
+  color: #1d1d1d;
+  font-size: 47px;
+  font-weight: 600;
+  line-height: 70px;
+}
+
+.container {
+  max-width: 1350px;
+  margin: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  width: 100%;
+  z-index: 9;
+}
+
+.col-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.primary-btn {
+  background-color: rgba(52, 52, 52, 0.1);
+  border-radius: 18px;
+  opacity: 1;
+  backdrop-filter: blur(45px);
+  -webkit-backdrop-filter: blur(45px);
+  padding: 16px 32px;
+  color: #1d1d1d;
+}
+
+.first-section {
+  position: relative;
+  max-height: 100vh;
+  overflow: hidden;
+}
+.first-section video {
+  width: 100%;
+}
+.first-section-div {
+  position: absolute;
+  left: 50%;
+  z-index: 9;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 900px;
+}
+.first-section-div h1 {
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 72px;
+  letter-spacing: 0px;
+  color: #1d1d1d;
+  line-height: 90px;
+  font-weight: 500;
+}
+.first-section-div a {
+  display: block;
+  margin: auto;
+  width: fit-content;
+  font-weight: 500;
+}
+.our-solutions {
+  padding: 100px 0;
+}
+
+.our-solutions p {
+  text-align: center;
+  letter-spacing: 0.44px;
+  margin-bottom: 6px;
+}
+.our-solutions h2 {
+  text-align: center;
+}
+.our-solutions-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.our-solutions-div {
+  display: flex;
+  gap: 15px;
+}
+
+.our-solutions-box {
+  flex: 1;
+  position: relative;
+}
+
+.our-solutions-box:hover {
+  flex: 1.2;
+}
+
+.our-solutions-details {
+  position: absolute;
+  left: 39px;
+  bottom: 39px;
+}
+.our-solutions-details a {
+  display: inline-block;
+}
+
+/* loader */
+.loader {
+  text-align: center;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  height: 100%;
+  width: 100%;
+  background-color: #1a1a1a;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  z-index: 99;
+}
+
+.loader path {
+  stroke: #eee6da;
+  stroke-width: 2;
+  fill: none;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: draw 3s ease forwards;
+}
+
+.loader h3 {
+  margin-top: 0;
+  color: #eee6da;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.41s ease forwards 1.5s;
+  font-size: 35px;
+  overflow: hidden;
+  padding-left: 10px;
+}
+.loader-text {
+  height: 50px;
+  overflow: hidden;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.content {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.page-content {
+  background-color: #fff;
+  position: relative;
+  z-index: 9;
+}
+.standby {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(40px);
+  transition: all 0.8s;
+}
+.fadein {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.our-solutions-box {
+  border-radius: 384px;
+  overflow: hidden;
+  transition-duration: 1.25s;
+  transition-timing-function: cubic-bezier(0.5, 0, 0.25, 1);
+  height: 530px;
+  overflow: hidden;
+}
+
+.our-solutions-div.standby1.fadein1 .our-solutions-box {
+  border-radius: 23px;
+}
+
+.btn-text-div a {
+  background-color: #343434;
+  border-radius: 18px;
+  padding: 24px 55px;
+  color: #f2efea;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  line-height: 1.4;
+  font-weight: 700;
+}
+.btn-text-div {
+  max-width: 1130px;
+  position: relative;
+}
+
+footer {
+  background-color: #242424;
+  position: sticky;
+  bottom: 0;
+}
+footer .btn-text-div {
+  max-width: 100%;
+  padding: 140px 0;
+}
+
+footer .btn-text-div h4 {
+  color: #f2efea;
+  line-height: 60px;
+}
+footer .btn-text-div a {
+  color: #f2efea;
+  bottom: 8px;
+  position: relative;
+}
