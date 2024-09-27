@@ -564,4 +564,12 @@ nav {
   .desktop-video {
     display: none;
   }
+  .first-section {
+    height: 100vh;
+  }
+  .first-section video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
