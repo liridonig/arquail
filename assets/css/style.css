@@ -210,6 +210,7 @@ h4 {
 }
 .clients .swiper-wrapper {
   transition-timing-function: linear;
+  align-items: center;
 }
 
 .btn-text-div a img {
