@@ -95,7 +95,7 @@
         </section>
         <section class="btn-text">
           <div class="container">
-            <div class="btn-text-div text">
+            <div class="btn-text-div">
               <h4>
                 When experience meets youth, you develop easily. When ideas meet
                 motivation, you create swiftly.
@@ -258,7 +258,6 @@
     <script src="assets/js/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://assets.codepen.io/16327/SplitText3.min.js"></script>
     <script src="https://unpkg.com/split-type"></script>
     <script>
       window.addEventListener("load", function () {
@@ -304,40 +303,6 @@
           });
         }
       });
-
-      gsap.config({ trialWarn: false });
-      console.clear();
-      gsap.registerPlugin(ScrollTrigger, SplitText);
-      let split = new SplitText("h4", { type: "lines" });
-
-      function makeItHappen() {
-        split.lines.forEach((target) => {
-          gsap.to(target, {
-            backgroundPositionX: 0,
-            ease: "none",
-            scrollTrigger: {
-              trigger: target,
-              markers: false,
-              scrub: 0.5,
-              start: "top center",
-              end: "bottom center",
-            },
-          });
-        });
-      }
-
-      let someDelay = gsap.delayedCall(0.2, newTriggers).pause();
-      window.addEventListener("resize", () => someDelay.restart(true));
-
-      function newTriggers() {
-        ScrollTrigger.getAll().forEach((trigger) => {
-          trigger.kill();
-        });
-        split.split();
-        makeItHappen();
-      }
-
-      makeItHappen();
     </script>
     <script>
       var swiper = new Swiper(".mySwiper", {
