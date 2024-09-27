@@ -59,19 +59,19 @@
           </video>
 
           <div class="first-section-div">
-            <h1>
+            <h1 id="my-text">
               The T in “TECH”<br />
               stands for TRUST
             </h1>
-            <a href="#" class="primary-btn">Discover</a>
+            <a href="#" class="primary-btn" id="my-text">Discover</a>
           </div>
         </section>
         <section class="our-solutions">
           <div class="container">
-            <p>Crafting Digital Experiences</p>
-            <h2>Ultimate solutions for CEOs & CTOs</h2>
+            <p class="standby">Crafting Digital Experiences</p>
+            <h2 class="standby">Ultimate solutions for CEOs & CTOs</h2>
 
-            <div class="our-solutions-div">
+            <div class="our-solutions-div standby">
               <div class="our-solutions-box standby1">
                 <img src="assets/images/ceos.png" />
                 <div class="our-solutions-details">
@@ -95,7 +95,7 @@
         </section>
         <section class="btn-text">
           <div class="container">
-            <div class="btn-text-div">
+            <div class="btn-text-div text">
               <h4>
                 When experience meets youth, you develop easily. When ideas meet
                 motivation, you create swiftly.
@@ -110,12 +110,12 @@
           <div class="container">
             <div class="indutries-div">
               <div class="industries-title">
-                <h4>
+                <h4 class="standby">
                   Industries<br />
                   we empower
                 </h4>
               </div>
-              <div class="industries-swiper">
+              <div class="industries-swiper standby">
                 <div class="swiper mySwiper">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
@@ -148,9 +148,9 @@
         </section>
         <section class="trusted-clients">
           <div class="container">
-            <p>Valued Clients, Lasting Success</p>
+            <p class="standby">Valued Clients, Lasting Success</p>
           </div>
-          <div class="swiper clients">
+          <div class="swiper clients standby">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <div class="clients-box">
@@ -256,6 +256,89 @@
     </div>
     <script src="assets/js/swiper.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://assets.codepen.io/16327/SplitText3.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script>
+      window.addEventListener("load", function () {
+        const loader = document.querySelector(".loader");
+        const video = loader.querySelector("video");
+        const content = document.querySelector(".content");
+
+        setTimeout(function () {
+          video.style.opacity = "0";
+
+          setTimeout(function () {
+            video.remove();
+
+            loader.style.width = "0";
+
+            setTimeout(function () {
+              loader.remove();
+              content.style.display = "block";
+
+              setTimeout(() => (content.style.opacity = 1), 100);
+
+              startTextAnimation();
+            }, 500);
+          }, 1000);
+        }, 3500);
+
+        function startTextAnimation() {
+          const myText = new SplitType("#my-text");
+
+          gsap.utils.toArray("#my-text").forEach((text) => {
+            gsap.to(text.querySelectorAll(".char"), {
+              y: 0,
+              stagger: 0.05,
+              duration: 0.5,
+              opacity: 1,
+              scrollTrigger: {
+                trigger: text,
+                start: "top 80%",
+                end: "bottom 60%",
+                toggleActions: "play none none none",
+              },
+            });
+          });
+        }
+      });
+
+      gsap.config({ trialWarn: false });
+      console.clear();
+      gsap.registerPlugin(ScrollTrigger, SplitText);
+      let split = new SplitText("h4", { type: "lines" });
+
+      function makeItHappen() {
+        split.lines.forEach((target) => {
+          gsap.to(target, {
+            backgroundPositionX: 0,
+            ease: "none",
+            scrollTrigger: {
+              trigger: target,
+              markers: false,
+              scrub: 0.5,
+              start: "top center",
+              end: "bottom center",
+            },
+          });
+        });
+      }
+
+      let someDelay = gsap.delayedCall(0.2, newTriggers).pause();
+      window.addEventListener("resize", () => someDelay.restart(true));
+
+      function newTriggers() {
+        ScrollTrigger.getAll().forEach((trigger) => {
+          trigger.kill();
+        });
+        split.split();
+        makeItHappen();
+      }
+
+      makeItHappen();
+    </script>
     <script>
       var swiper = new Swiper(".mySwiper", {
         slidesPerView: 1,
@@ -298,29 +381,6 @@
             },
           },
         });
-      });
-
-      window.addEventListener("load", function () {
-        setTimeout(function () {
-          const loader = document.querySelector(".loader");
-          const video = loader.querySelector("video");
-          const content = document.querySelector(".content");
-
-          video.style.opacity = "0";
-
-          setTimeout(function () {
-            video.remove();
-
-            loader.style.width = "0";
-
-            setTimeout(function () {
-              loader.remove();
-              content.style.display = "block";
-
-              setTimeout(() => (content.style.opacity = 1), 100);
-            }, 1000);
-          }, 1000); //vide fade out
-        }, 4000);
       });
     </script>
   </body>

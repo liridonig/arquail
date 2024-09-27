@@ -347,7 +347,7 @@ input:focus {
   overflow: hidden;
   z-index: 99;
   z-index: 9999;
-  transition: width 1s ease;
+  transition: width 0.5s ease;
 }
 .loader video {
   transition: opacity 1s ease;
@@ -355,7 +355,7 @@ input:focus {
 
 .content {
   opacity: 0;
-  transition: opacity 1s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
 }
 .page-content {
   background-color: #fff;
@@ -437,7 +437,6 @@ nav {
 }
 .industries-title {
   position: absolute;
-  z-index: 100;
 }
 .industries-box {
   position: relative;
@@ -467,7 +466,7 @@ nav {
   width: 100%;
 }
 .mySwiper {
-  padding-left: 500px;
+  padding-left: 440px;
   overflow: visible;
 }
 .mobile-video {
@@ -488,6 +487,12 @@ nav {
   }
 }
 @media only screen and (max-width: 1024px) {
+  .industries-box h5 {
+    font-size: 27px;
+    left: 30px;
+    top: 30px;
+    line-height: 35px;
+  }
   .container {
     max-width: 767px;
   }
@@ -653,4 +658,31 @@ nav {
   .term-conditions-mobile {
     display: block;
   }
+}
+
+.line {
+  /*clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);*/
+  overflow: hidden;
+  font-weight: bold;
+}
+
+#my-text {
+  font-weight: bold;
+}
+.char {
+  transform: translateY(115px);
+  transition: transform 0.5s;
+}
+
+.text > h4 > div {
+  background: linear-gradient(
+    to right,
+    rgb(52, 52, 52) 50%,
+    rgb(167, 163, 156) 50%
+  );
+  background-size: 200% 100%;
+  background-position-x: 100%;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
 }
