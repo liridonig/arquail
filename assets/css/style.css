@@ -37,9 +37,9 @@ h2 {
 
 h4 {
   color: #1d1d1d;
-  font-size: 47px;
+  font-size: 45px;
   font-weight: 600;
-  line-height: 70px;
+  line-height: 65px;
 }
 
 .container {
@@ -128,10 +128,11 @@ h4 {
   position: relative;
   transition: all 0.4s;
 }
-
-.our-solutions-box:hover {
-  flex: 1.2;
-  transition: all 0.4s;
+@media only screen and (min-width: 1024px) {
+  .our-solutions-box:hover {
+    flex: 1.2;
+    transition: all 0.4s;
+  }
 }
 
 .our-solutions-details {
@@ -183,7 +184,7 @@ h4 {
   transition-timing-function: cubic-bezier(0.5, 0, 0.25, 1);
 }
 
-.our-solutions-div.standby1.fadein1 .our-solutions-box img {
+.standby1.fadein1.our-solutions-box img {
   border-radius: 23px;
 }
 
@@ -197,7 +198,7 @@ h4 {
   border-radius: 18px;
   color: #f2efea;
   position: absolute;
-  right: -157px;
+  right: -115px;
   bottom: 8px;
   line-height: 1.4;
   font-weight: 700;
@@ -233,6 +234,11 @@ footer {
   background-color: #242424;
   position: sticky;
   bottom: 0;
+  max-height: 100vh;
+  overflow: scroll;
+}
+footer::-webkit-scrollbar {
+  display: none;
 }
 footer .btn-text-div {
   max-width: 100%;
@@ -328,7 +334,6 @@ input:focus {
 /* loader */
 .loader {
   opacity: 1;
-  transition: opacity 0.5s ease-in-out;
   height: 100%;
   width: 100%;
   background-color: #1a1a1a;
@@ -341,11 +346,17 @@ input:focus {
   top: 0;
   overflow: hidden;
   z-index: 99;
+  z-index: 9999;
+  transition: width 1s ease;
 }
-/* .content {
+.loader video {
+  transition: opacity 1s ease;
+}
+
+.content {
   opacity: 0;
   transition: opacity 1s ease-in-out;
-} */
+}
 .page-content {
   background-color: #fff;
   position: relative;
@@ -402,6 +413,9 @@ nav {
   font-weight: 600;
   border-bottom: 1px solid #1d1d1d;
 }
+.navbar li:last-child {
+  display: none;
+}
 .industries {
   background-color: #d8d5ce;
   padding: 80px 0;
@@ -455,4 +469,99 @@ nav {
 .mySwiper {
   padding-left: 500px;
   overflow: visible;
+}
+.mobile-video {
+  display: none;
+}
+@media only screen and (max-width: 1250px) {
+  .btn-text-div h4 {
+    font-size: 40px;
+    line-height: 58px;
+  }
+  .btn-text-div a {
+    position: relative;
+    display: inline-flex;
+    right: auto;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .container {
+    max-width: 767px;
+  }
+  .first-section-div h1 {
+    font-size: 40px;
+    line-height: 55px;
+  }
+  .our-solutions h2 {
+    font-size: 40px;
+    line-height: 45px;
+    margin-bottom: 40px;
+  }
+  .our-solutions {
+    padding: 60px 0;
+  }
+  .our-solutions-div {
+    display: grid;
+  }
+  .nav-btn {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+    position: relative;
+    z-index: 99;
+  }
+  .hamburger .line {
+    height: 3px;
+    width: 29px;
+    background-color: #1d1d1d;
+    margin: 5px 0;
+  }
+  .navbar {
+    opacity: 0;
+    visibility: hidden;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    gap: 25px;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color: #d8d5ce;
+    padding: 40px 0;
+    text-align: center;
+    transition: all 0.4s;
+    transform: translateY(10px);
+    justify-content: center;
+  }
+  .navbar.active-nav {
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.4s;
+    background-color: #d8d5ce;
+    transform: translateY(0);
+  }
+  header {
+    padding: 25px 0;
+    position: fixed;
+    background-color: #d8d5ce;
+  }
+  .navbar li a {
+    font-size: 30px;
+  }
+  .navbar li:last-child {
+    display: block;
+  }
+  .logo {
+    position: relative;
+    z-index: 99;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .mobile-video {
+    display: block;
+  }
+  .desktop-video {
+    display: none;
+  }
 }

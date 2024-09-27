@@ -3,14 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/assets/images/logo-icon.svg" />
     <title>Arquail</title>
     <link rel="stylesheet" href="assets/css/swiper.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    <!-- <div class="loader">
-      <img src="assets/images/loader.gif" />
-    </div> -->
+    <div class="loader">
+      <video autoplay loop muted playsinline>
+        <source src="assets/images/Logo.mp4" type="video/mp4" />
+        <source src="assets/images/Logo.mp4" type="video/ogg" />
+        Your browser does not support HTML video.
+      </video>
+    </div>
 
     <div class="content">
       <div class="page-content">
@@ -36,6 +41,9 @@
                 <li>
                   <a href="about.html">for CTOs</a>
                 </li>
+                <li>
+                  <a href="about.html">Get in touch</a>
+                </li>
               </ul>
               <div class="nav-btn">
                 <a href="#">Get in touch</a>
@@ -44,9 +52,14 @@
           </div>
         </header>
         <section class="first-section">
-          <video autoplay loop muted playsinline>
+          <video autoplay loop muted playsinline class="desktop-video">
             <source src="assets/images/animation.mp4" type="video/mp4" />
             <source src="assets/images/animation.mp4" type="video/ogg" />
+            Your browser does not support HTML video.
+          </video>
+          <video autoplay loop muted playsinline class="mobile-video">
+            <source src="assets/images/Portrait.mp4" type="video/mp4" />
+            <source src="assets/images/Portrait.mp4" type="video/ogg" />
             Your browser does not support HTML video.
           </video>
           <div class="first-section-div">
@@ -62,8 +75,8 @@
             <p>Crafting Digital Experiences</p>
             <h2>Ultimate solutions for CEOs & CTOs</h2>
 
-            <div class="our-solutions-div standby1">
-              <div class="our-solutions-box">
+            <div class="our-solutions-div">
+              <div class="our-solutions-box standby1">
                 <img src="assets/images/ceos.png" />
                 <div class="our-solutions-details">
                   <h3><span>for</span> CEOs</h3>
@@ -72,7 +85,7 @@
                   /></a>
                 </div>
               </div>
-              <div class="our-solutions-box">
+              <div class="our-solutions-box standby1">
                 <img src="assets/images/ctos.png" />
                 <div class="our-solutions-details">
                   <h3><span>for</span> CTOs</h3>
@@ -286,27 +299,27 @@
         });
       });
 
-      window.addEventListener("load", () => {
-        const loader = document.querySelector(".loader");
-        const content = document.querySelector(".content");
+      window.addEventListener("load", function () {
+        setTimeout(function () {
+          const loader = document.querySelector(".loader");
+          const video = loader.querySelector("video");
+          const content = document.querySelector(".content");
 
-        const gifImage = loader.querySelector("img");
-        const originalSrc = gifImage.getAttribute("src");
-        gifImage.setAttribute(
-          "src",
-          originalSrc + "?t=" + new Date().getTime()
-        );
+          video.style.opacity = "0";
 
-        setTimeout(() => {
-          loader.style.opacity = "0";
-          setTimeout(() => {
-            loader.remove();
+          setTimeout(function () {
+            video.remove();
 
-            document.body.classList.add("background-animate");
+            loader.style.width = "0";
 
-            content.style.opacity = "1";
-          }, 500);
-        }, 4400);
+            setTimeout(function () {
+              loader.remove();
+              content.style.display = "block";
+
+              setTimeout(() => (content.style.opacity = 1), 100);
+            }, 1000);
+          }, 1000); //vide fade out
+        }, 4000);
       });
     </script>
   </body>
