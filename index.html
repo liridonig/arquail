@@ -8,12 +8,41 @@
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    <div class="loader">
+    <!-- <div class="loader">
       <img src="assets/images/loader.gif" />
-    </div>
+    </div> -->
 
     <div class="content">
       <div class="page-content">
+        <header id="header">
+          <div class="overlay"></div>
+          <div class="container">
+            <nav>
+              <div class="logo">
+                <a href="index.html"><img src="assets/images/logo.svg" /></a>
+              </div>
+              <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+              </div>
+              <ul id="menu-header-menu" class="navbar">
+                <li>
+                  <a href="#">Culture</a>
+                </li>
+                <li>
+                  <a href="contact.html">for CEOs</a>
+                </li>
+                <li>
+                  <a href="about.html">for CTOs</a>
+                </li>
+              </ul>
+              <div class="nav-btn">
+                <a href="#">Get in touch</a>
+              </div>
+            </nav>
+          </div>
+        </header>
         <section class="first-section">
           <video autoplay loop muted playsinline>
             <source src="assets/images/animation.mp4" type="video/mp4" />
@@ -21,7 +50,10 @@
             Your browser does not support HTML video.
           </video>
           <div class="first-section-div">
-            <h1>Innovating Development, Elevating Futures</h1>
+            <h1>
+              The T in “TECH”<br />
+              stands for TRUST
+            </h1>
             <a href="#" class="primary-btn">Discover</a>
           </div>
         </section>
@@ -56,8 +88,8 @@
           <div class="container">
             <div class="btn-text-div">
               <h4>
-                Change begins with us—a business redefined, where purpose and
-                profit work in harmony.
+                When experience meets youth, you develop easily. When ideas meet
+                motivation, you create swiftly.
                 <a href="#"
                   >Culture <img src="assets/images/colored-icon.svg"
                 /></a>
@@ -65,7 +97,46 @@
             </div>
           </div>
         </section>
-
+        <section class="industries">
+          <div class="container">
+            <div class="indutries-div">
+              <div class="industries-title">
+                <h4>
+                  Industries<br />
+                  we empower
+                </h4>
+              </div>
+              <div class="industries-swiper">
+                <div class="swiper mySwiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="industries-box">
+                        <img src="assets/images/1.png" />
+                        <h5>
+                          Taxation and<br />
+                          Regulatory<br />
+                          Compliance
+                        </h5>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="industries-box">
+                        <img src="assets/images/2.png" />
+                        <h5>Compliance</h5>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="industries-box">
+                        <img src="assets/images/3.png" />
+                        <h5>Earth<br />Observation</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         <section class="trusted-clients">
           <div class="container">
             <p>Valued Clients, Lasting Success</p>
@@ -162,6 +233,25 @@
     <script src="assets/js/swiper.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          1024: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+        },
+      });
+
       document.addEventListener("DOMContentLoaded", function () {
         var swiper = new Swiper(".clients", {
           slidesPerView: 1,

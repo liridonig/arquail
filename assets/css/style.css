@@ -17,6 +17,11 @@ a {
   font-size: 16px;
 }
 
+::selection {
+  background-color: #1d1d1d;
+  color: #fff;
+}
+
 p {
   font-size: 22px;
   font-weight: 300;
@@ -54,7 +59,7 @@ h4 {
 }
 
 .primary-btn {
-  background-color: rgba(52, 52, 52, 0.1);
+  background-color: rgba(255, 255, 255, 0.4);
   border-radius: 18px;
   opacity: 1;
   backdrop-filter: blur(45px);
@@ -78,6 +83,7 @@ h4 {
   top: 50%;
   transform: translate(-50%, -50%);
   width: 900px;
+  padding-top: 50px;
 }
 .first-section-div h1 {
   margin-bottom: 40px;
@@ -92,7 +98,7 @@ h4 {
   display: block;
   margin: auto;
   width: fit-content;
-  font-weight: 500;
+  font-weight: bold;
 }
 .our-solutions {
   padding: 110px 0;
@@ -120,10 +126,12 @@ h4 {
 .our-solutions-box {
   flex: 1;
   position: relative;
+  transition: all 0.4s;
 }
 
 .our-solutions-box:hover {
   flex: 1.2;
+  transition: all 0.4s;
 }
 
 .our-solutions-details {
@@ -161,19 +169,21 @@ h4 {
   color: #716e6b;
 }
 .btn-text {
-  padding: 75px 0;
+  padding: 75px 0 200px 0;
 }
 
 .our-solutions-box {
-  border-radius: 384px;
   overflow: hidden;
-  transition-duration: 1.25s;
-  transition-timing-function: cubic-bezier(0.5, 0, 0.25, 1);
   height: 530px;
   overflow: hidden;
 }
+.our-solutions-box img {
+  transition-duration: 1.25s;
+  border-radius: 384px;
+  transition-timing-function: cubic-bezier(0.5, 0, 0.25, 1);
+}
 
-.our-solutions-div.standby1.fadein1 .our-solutions-box {
+.our-solutions-div.standby1.fadein1 .our-solutions-box img {
   border-radius: 23px;
 }
 
@@ -187,8 +197,8 @@ h4 {
   border-radius: 18px;
   color: #f2efea;
   position: absolute;
-  right: 5px;
-  bottom: 0;
+  right: -157px;
+  bottom: 8px;
   line-height: 1.4;
   font-weight: 700;
   display: flex;
@@ -210,7 +220,6 @@ h4 {
 .trusted-clients {
   padding: 90px 0;
   background-color: #d8d5ce;
-  border-top: 1px solid #707070;
 }
 .trusted-clients p {
   text-align: center;
@@ -351,4 +360,98 @@ input:focus {
   visibility: visible;
   opacity: 1;
   transform: translateY(0);
+}
+
+header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+  padding: 40px 0;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hamburger {
+  display: none;
+}
+.navbar {
+  list-style: none;
+  display: flex;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 22px;
+  opacity: 1;
+  backdrop-filter: blur(45px);
+  -webkit-backdrop-filter: blur(45px);
+  position: fixed;
+  top: 51px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  gap: 41px;
+  padding: 15px 40px;
+}
+.navbar li a {
+  font-weight: bold;
+  color: #1d1d1d;
+}
+.nav-btn a {
+  font-weight: 600;
+  border-bottom: 1px solid #1d1d1d;
+}
+.industries {
+  background-color: #d8d5ce;
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+.industries::before {
+  content: "";
+  /* background-color:#d8d5ce; */
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 41%;
+  z-index: 9;
+  height: 100%;
+}
+.industries-title h4 {
+  line-height: 56px;
+}
+.industries-title {
+  position: absolute;
+  z-index: 100;
+}
+.industries-box {
+  position: relative;
+}
+.industries-box::before {
+  content: "";
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="356" height="416" viewBox="0 0 356 416"><defs><linearGradient id="linear-gradient" x1="0.017" y1="0.012" x2="0.558" y2="1.042" gradientUnits="objectBoundingBox"><stop offset="0" stop-color="%23d8d5ce"/><stop offset="1" stop-color="%23d8d5ce" stop-opacity="0"/></linearGradient></defs><rect id="Rectangle_43" data-name="Rectangle 43" width="356" height="416" rx="28" fill="url(%23linear-gradient)"/></svg>');
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.industries-box h5 {
+  font-size: 32px;
+  letter-spacing: 0px;
+  color: #1d1d1d;
+  font-weight: 600;
+  position: absolute;
+  top: 50px;
+  left: 40px;
+  z-index: 99;
+}
+.industries-box img {
+  width: 100%;
+}
+.mySwiper {
+  padding-left: 500px;
+  overflow: visible;
 }
