@@ -473,7 +473,10 @@ nav {
 .mobile-video {
   display: none;
 }
-@media only screen and (max-width: 1250px) {
+.term-conditions-mobile {
+  display: none;
+}
+@media only screen and (max-width: 1265px) {
   .btn-text-div h4 {
     font-size: 40px;
     line-height: 58px;
@@ -491,6 +494,7 @@ nav {
   .first-section-div h1 {
     font-size: 40px;
     line-height: 55px;
+    margin-bottom: 25px;
   }
   .our-solutions h2 {
     font-size: 40px;
@@ -556,8 +560,75 @@ nav {
     position: relative;
     z-index: 99;
   }
+  .our-solutions-details h3 {
+    font-size: 43px;
+  }
+  .btn-text {
+    padding: 30px 0 100px 0;
+  }
+  .btn-text-div h4 {
+    font-size: 35px;
+    line-height: 45px;
+  }
+  .btn-text-div a {
+    display: flex;
+    right: auto;
+    width: fit-content;
+    top: 20px;
+  }
+  .industries {
+    padding: 45px 0;
+  }
+  .industries-title {
+    position: relative;
+  }
+  .industries-title h4 {
+    line-height: 50px;
+    font-size: 40px;
+    margin-bottom: 35px;
+  }
+  .trusted-clients {
+    padding: 40px 0;
+    background-color: #d8d5ce;
+  }
+  .trusted-clients p {
+    margin-bottom: 40px;
+  }
+  .mySwiper.mySwiper {
+    padding-left: 0;
+  }
+  .swiper-slide img {
+    max-width: 100%;
+  }
+  footer .btn-text-div {
+    padding: 45px 0 55px 0;
+  }
+  footer .btn-text-div h4 {
+    font-size: 28px;
+    line-height: 37px;
+  }
+  footer .btn-text-div a {
+    display: flex;
+  }
+  .footer-contact {
+    padding: 45px 0;
+  }
+  .footer-contact .col-2 {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+  .footer-contact-div {
+    grid-template-columns: repeat(3, 1fr);
+    padding-left: 0;
+  }
+  .footer-newsletter label {
+    max-width: 100%;
+  }
 }
 @media only screen and (max-width: 767px) {
+  footer {
+    padding-top: 80px;
+  }
   .mobile-video {
     display: block;
   }
@@ -565,11 +636,21 @@ nav {
     display: none;
   }
   .first-section {
-    height: 100vh;
+    height: 90vh;
   }
   .first-section video {
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+  .term-conditions {
+    display: none;
+  }
+
+  .footer-contact-div {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .term-conditions-mobile {
+    display: block;
   }
 }
