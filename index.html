@@ -96,13 +96,13 @@
         <section class="btn-text">
           <div class="container">
             <div class="btn-text-div">
-              <h4>
+              <h4 id="animateText">
                 When experience meets youth, you develop easily. When ideas meet
                 motivation, you create swiftly.
-                <a href="#"
-                  >Culture <img src="assets/images/colored-icon.svg"
-                /></a>
               </h4>
+              <a href="#"
+                >Culture <img src="assets/images/colored-icon.svg"
+              /></a>
             </div>
           </div>
         </section>
@@ -301,6 +301,34 @@
               },
             });
           });
+        }
+      });
+    </script>
+    <script>
+      const paragraph = document.getElementById("animateText");
+      const text = paragraph.textContent;
+      let letterIndex = 0;
+
+      window.addEventListener("scroll", () => {
+        const rect = paragraph.getBoundingClientRect();
+        const textArray = text.split("");
+
+        // Only trigger when the paragraph is in the viewport (middle of the page)
+        if (
+          rect.top < window.innerHeight &&
+          rect.bottom > 0 &&
+          letterIndex < textArray.length
+        ) {
+          const spanArray = textArray
+            .map((letter, index) => {
+              return `<span style="color: ${
+                index <= letterIndex ? "#1d1d1d" : "#a7a39c"
+              }">${letter}</span>`;
+            })
+            .join("");
+
+          paragraph.innerHTML = spanArray;
+          letterIndex++;
         }
       });
     </script>

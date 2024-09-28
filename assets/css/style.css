@@ -180,7 +180,7 @@ h4 {
 }
 .our-solutions-box img {
   transition-duration: 1.25s;
-  border-radius: 384px;
+  border-radius: 384px 384px 23px 23px;
   transition-timing-function: cubic-bezier(0.5, 0, 0.25, 1);
 }
 
@@ -191,6 +191,13 @@ h4 {
 .btn-text-div {
   max-width: 1130px;
   position: relative;
+}
+.btn-text-div h4 {
+  column-rule-color: #716e6b;
+}
+
+.highlighted {
+  color: #1d1d1d;
 }
 
 .btn-text-div a {
@@ -484,6 +491,7 @@ nav {
     position: relative;
     display: inline-flex;
     right: auto;
+    top: 10px;
   }
 }
 @media only screen and (max-width: 1024px) {
