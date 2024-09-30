@@ -504,6 +504,9 @@ nav {
   .container {
     max-width: 767px;
   }
+  .first-section-div {
+    width: 100%;
+  }
   .first-section-div h1 {
     font-size: 52px;
     line-height: 55px;
