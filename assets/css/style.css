@@ -88,7 +88,7 @@ h4 {
 .first-section-div h1 {
   margin-bottom: 40px;
   text-align: center;
-  font-size: 72px;
+  font-size: 92px;
   letter-spacing: 0px;
   color: #1d1d1d;
   line-height: 90px;
@@ -360,10 +360,10 @@ input:focus {
   transition: opacity 1s ease;
 }
 
-.content {
+/* .content {
   opacity: 0;
   transition: opacity 0.2s ease-in-out;
-}
+} */
 .page-content {
   background-color: #fff;
   position: relative;
@@ -505,7 +505,7 @@ nav {
     max-width: 767px;
   }
   .first-section-div h1 {
-    font-size: 40px;
+    font-size: 52px;
     line-height: 55px;
     margin-bottom: 25px;
   }
@@ -641,6 +641,7 @@ nav {
 @media only screen and (max-width: 767px) {
   footer {
     padding-top: 80px;
+    max-height: 55vh;
   }
   .mobile-video {
     display: block;
