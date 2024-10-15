@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="144" height="136" viewBox="0 0 144 136">
+  <g id="Group_111" data-name="Group 111" transform="translate(-1056 -3766)">
+    <g id="Rectangle_188" data-name="Rectangle 188" transform="translate(1056 3766)" fill="none" stroke="#dad6d0" stroke-width="0.6">
+      <rect width="144" height="136" rx="18" stroke="none"/>
+      <rect x="0.3" y="0.3" width="143.4" height="135.4" rx="17.7" fill="none"/>
+    </g>
+    <path id="Icon_awesome-slack" data-name="Icon awesome-slack" d="M11.338,36.353a5.669,5.669,0,1,1-5.669-5.669h5.669Zm2.857,0a5.669,5.669,0,0,1,11.338,0v14.2a5.669,5.669,0,1,1-11.338,0Zm5.669-22.765a5.669,5.669,0,1,1,5.669-5.669v5.669H19.864Zm0,2.857a5.669,5.669,0,1,1,0,11.338H5.669a5.669,5.669,0,1,1,0-11.338Zm22.765,5.669A5.669,5.669,0,1,1,48.3,27.783H42.629Zm-2.857,0a5.669,5.669,0,0,1-11.338,0V7.919a5.669,5.669,0,0,1,11.338,0ZM34.1,44.879a5.669,5.669,0,1,1-5.669,5.669V44.879Zm0-2.857a5.669,5.669,0,1,1,0-11.338H48.3a5.669,5.669,0,1,1,0,11.338Z" transform="translate(1105.176 3804.971)" fill="#2e2a26"/>
+  </g>
+</svg>

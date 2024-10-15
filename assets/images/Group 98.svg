@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="144" height="136" viewBox="0 0 144 136">
+  <g id="Group_98" data-name="Group 98" transform="translate(-217 -3604)">
+    <g id="Rectangle_176" data-name="Rectangle 176" transform="translate(217 3604)" fill="none" stroke="#dad6d0" stroke-width="0.6">
+      <rect width="144" height="136" rx="18" stroke="none"/>
+      <rect x="0.3" y="0.3" width="143.4" height="135.4" rx="17.7" fill="none"/>
+    </g>
+    <g id="Icon_ionic-logo-javascript" data-name="Icon ionic-logo-javascript" transform="translate(261.048 3650.698)">
+      <path id="Path_177" data-name="Path 177" d="M-3.449,2.813h-9.682V28.531c0,6.364-2.182,8.141-5.98,8.141a14.467,14.467,0,0,1-4.629-.734l-1.009,7.529a22.957,22.957,0,0,0,6.645.98c8.72,0,14.656-4.1,14.656-15.852V2.813Z" transform="translate(24.75 -1.844)" fill="#2e2a26"/>
+      <path id="Path_178" data-name="Path 178" d="M6.306,2.25C-3.067,2.25-9,7.575-9,14.614c0,6.062,4.569,9.857,11.212,12.3,4.8,1.714,6.7,3.245,6.7,5.754,0,2.754-2.2,4.53-6.348,4.53a20.993,20.993,0,0,1-9.73-2.572v0L-9,42.278A24,24,0,0,0,2.034,44.85c10.976,0,16.077-5.876,16.077-12.793,0-5.876-3.263-9.67-10.321-12.365C2.568,17.612.374,16.45.374,13.818c0-2.082,1.9-3.978,5.815-3.978a16.744,16.744,0,0,1,8.049,2.093l2.315-7.746A24.932,24.932,0,0,0,6.306,2.25Z" transform="translate(36.111 -2.25)" fill="#2e2a26"/>
+    </g>
+  </g>
+</svg>

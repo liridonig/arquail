@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="120.363" height="120.363" viewBox="0 0 120.363 120.363">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="0.961" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#d9d5ce"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+  </defs>
+  <path id="Icon_material-arrow_downward" data-name="Icon material-arrow_downward" d="M91.109,48.555l-7.5-7.5L53.874,70.736V6H43.235V70.736L13.553,41,6,48.555,48.555,91.109Z" transform="translate(60.181 128.848) rotate(-135)" fill="url(#linear-gradient)"/>
+</svg>

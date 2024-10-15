@@ -9,13 +9,13 @@
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    <div class="loader">
+    <!-- <div class="loader">
       <video autoplay loop muted playsinline>
         <source src="assets/images/Logo.mp4" type="video/mp4" />
         <source src="assets/images/Logo.mp4" type="video/ogg" />
         Your browser does not support HTML video.
       </video>
-    </div>
+    </div> -->
 
     <div class="content">
       <div class="page-content">
@@ -39,15 +39,12 @@
                   <a href="index.html">for CEOs</a>
                 </li>
                 <li>
-                  <a href="index.html">for CTOs</a>
+                  <a href="for-ctos.html">for CTOs</a>
                 </li>
                 <li>
-                  <a href="index.html">Get in touch</a>
+                  <a href="contact.html">Get in touch</a>
                 </li>
               </ul>
-              <!-- <div class="nav-btn">
-                <a href="#">Get in touch</a>
-              </div> -->
             </nav>
           </div>
         </header>
@@ -60,41 +57,89 @@
 
           <div class="first-section-div">
             <div class="container">
-              <h1 id="my-text">
-                The T in “TECH”<br />
-                stands for TRUST
+              <h1>
+                An augmented CTO, teams, and individuals to help you realize
+                your strategy.
               </h1>
-              <a href="#" class="primary-btn" id="my-text">Discover</a>
+              <p>
+                Whether you need technical leadership or specialized skills, our
+                engineer seamlessly integrate into your organization, driving
+                your business forward.
+              </p>
+              <a href="#" class="primary-btn"
+                >Get to know us<img src="assets/images/rigt-icon.svg"
+              /></a>
             </div>
           </div>
         </section>
-        <section class="our-solutions">
+        <section class="about-homepage">
           <div class="container">
-            <p class="standby">Crafting Digital Experiences</p>
-            <h2 class="standby">Ultimate solutions for CEOs & CTOs</h2>
-
-            <div class="our-solutions-div standby">
-              <div class="our-solutions-box standby1">
-                <img src="assets/images/ceos.png" />
-                <div class="our-solutions-details">
-                  <h3><span>for</span> CEOs</h3>
-                  <a href="#" class="primary-btn"
-                    >Discover <img src="assets/images/rigt-icon.svg"
-                  /></a>
-                </div>
+            <div class="col-2">
+              <div class="about-homepage-box">
+                <h5 class="standby">Unable to hire good talent locally?</h5>
+                <h5 class="standby">
+                  Disappointed by the quality from offshoring?
+                </h5>
               </div>
-              <div class="our-solutions-box standby1">
-                <img src="assets/images/ctos.png" />
-                <div class="our-solutions-details">
-                  <h3><span>for</span> CTOs</h3>
-                  <a href="#" class="primary-btn"
-                    >Discover <img src="assets/images/rigt-icon.svg"
-                  /></a>
-                </div>
+              <div class="about-homepage-box">
+                <p class="standby">
+                  Hiring talent in Europe and the US is tough due to competition
+                  and shortages, while offshoring to South Asia often brings
+                  time zone, communication, and cultural challenges. Companies
+                  struggle to balance quality, cost, and smooth cross-border
+                  integration.
+                </p>
               </div>
             </div>
           </div>
+          <div class="cards standby">
+            <div class="cards-box first-card">
+              <img src="assets/images/Icon material-arrow_downward.svg" />
+              <h5>
+                Flexible &<br />
+                Scalable
+              </h5>
+              <p>
+                Easily scale your team as your business grows, adapting quickly
+                to market demands while maintaining trust and quality.
+              </p>
+            </div>
+            <div class="cards-box">
+              <img src="assets/images/Union 3.svg" />
+              <h5>
+                Access<br />
+                to Talent
+              </h5>
+              <p>
+                Get the most talented and motivated engineers, just a 1.5-hour
+                flight from major European cities.
+              </p>
+            </div>
+            <div class="cards-box">
+              <img src="assets/images/Icon material-arrow_downward2.svg" />
+              <h5>
+                Seamless<br />
+                Integration
+              </h5>
+              <p>
+                Our experts integrate quickly into your teams, minimizing
+                onboarding.
+              </p>
+            </div>
+            <div class="cards-box first-cart">
+              <img src="assets/images/Union 5.svg" />
+              <h5>
+                At Eye<br />
+                Level
+              </h5>
+              <p>
+                We meet expectations, challenge your ideas and keep your
+                business competitive and reliable.
+              </p>
+            </div>
+          </div>
         </section>
+
         <section class="btn-text">
           <div class="container">
             <div class="btn-text-div">
@@ -187,7 +232,32 @@
             </div>
           </div>
         </section>
+        <section class="our-solutions">
+          <div class="container">
+            <div class="our-solutions-div standby">
+              <div class="our-solutions-box standby1">
+                <img src="assets/images/ceos.png" />
+                <div class="our-solutions-details">
+                  <h3><span>for</span> CEOs</h3>
+                  <a href="#" class="primary-btn"
+                    >Build <img src="assets/images/rigt-icon.svg"
+                  /></a>
+                </div>
+              </div>
+              <div class="our-solutions-box standby1">
+                <img src="assets/images/ctos.png" />
+                <div class="our-solutions-details">
+                  <h3><span>for</span> CTOs</h3>
+                  <a href="#" class="primary-btn"
+                    >Scale <img src="assets/images/rigt-icon.svg"
+                  /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
+
       <footer>
         <div class="container">
           <div class="btn-text-div">
@@ -257,17 +327,22 @@
         const video = loader.querySelector("video");
         const content = document.querySelector(".content");
 
+        // Disable scrolling
+        document.body.style.overflow = "hidden";
+
         setTimeout(function () {
           video.style.opacity = "0";
 
           setTimeout(function () {
             video.remove();
-
             loader.style.width = "0";
 
             setTimeout(function () {
               loader.remove();
               content.style.display = "block";
+
+              // Enable scrolling again
+              document.body.style.overflow = "";
 
               setTimeout(() => (content.style.opacity = 1), 100);
 
@@ -305,7 +380,6 @@
         const rect = paragraph.getBoundingClientRect();
         const textArray = text.split("");
 
-        // Only trigger when the paragraph is in the viewport (middle of the page)
         if (
           rect.top < window.innerHeight &&
           rect.bottom > 0 &&
@@ -349,7 +423,6 @@
           slidesPerView: 2,
           spaceBetween: 40,
           loop: true,
-          loopedSlides: 3, // Number of slides to loop (match this with your slide count)
           simulateTouch: false,
           autoplay: {
             delay: 0,

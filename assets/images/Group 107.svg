@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="144" height="136" viewBox="0 0 144 136">
+  <g id="Group_107" data-name="Group 107" transform="translate(-555 -3766)">
+    <g id="Rectangle_185" data-name="Rectangle 185" transform="translate(555 3766)" fill="none" stroke="#dad6d0" stroke-width="0.6">
+      <rect width="144" height="136" rx="18" stroke="none"/>
+      <rect x="0.3" y="0.3" width="143.4" height="135.4" rx="17.7" fill="none"/>
+    </g>
+    <path id="Icon_awesome-bitbucket" data-name="Icon awesome-bitbucket" d="M2.073,2.25A1.63,1.63,0,0,0,.422,3.86a2.685,2.685,0,0,0,.02.285L7.361,46.137a2.218,2.218,0,0,0,2.17,1.855H42.719a1.63,1.63,0,0,0,1.63-1.365l6.919-42.47a1.63,1.63,0,0,0-1.345-1.865,2.5,2.5,0,0,0-.285-.02ZM31.2,32.595h-10.6L17.744,17.616H33.772Z" transform="translate(601.145 3806.832)" fill="#2e2a26"/>
+  </g>
+</svg>
